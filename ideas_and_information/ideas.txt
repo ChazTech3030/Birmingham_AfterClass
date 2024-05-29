@@ -1,0 +1,57 @@
+yan - side scrolling shooter (think golden axe meets space invaders)
+elmi - side scrolling platformer (golden sun)
+jack - isometric old school rpg (ff 1-6, not baldurs gate)
+steven - runescape :shades:
+steven - fighting game
+khumo - pacman
+josh - castle-vania
+manjula - fps
+michael - tower defense
+michael - age of war (unit spawning war game)
+Mary - tetris or 2048
+Hulusi - racing game
+
+---
+11	jack - isometric old school rpg (ff 1-6, not baldurs gate)
+
+	MVP Requirements
+	- 	movement
+		-	collision detection
+	-	environment(s)
+		-	wide variety of environments
+		-	think grass/caves from pokemon that can cause events or other interactions to happen
+		-	setting
+			-	sci-fi
+			-	medievil
+				-	pirate
+				-	knights
+				-	princesses
+				-	vikings
+			-	futuristic
+			-	prehistoric
+			-	zombie/apocalypse
+	-	story/narative
+		-	acceepting/completing quests
+	-	saving the game/progress
+	-	lose conditions
+
+
+
+
+
+
+
+
+
+	-	multiple routes/endings
+	-	score system
+	-	finding items/hidden items
+	-	weather (does this affect the game in any way beyond aesthetics)
+		-	sun
+		-	rain
+		-	snow
+		-	storm
+	-	character models
+		-	do we include a custom character builder?
+	-	constraints/restraints/challenges/debuffs
+	-	
