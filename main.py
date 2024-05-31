@@ -14,6 +14,9 @@ player_pos = pygame.Vector2(screen.get_width() / 2, screen.get_height() / 2)
 
 world_objects = []
 
+background = pygame.image.load('assets/grassyfield.jpg')
+background = pygame.transform.scale(background, (screen_width, screen_height))
+
 with open('levels/level_001.csv', newline='') as csvfile:
     spamreader = csv.reader(csvfile, delimiter=',')
     for row in spamreader:
@@ -32,6 +35,7 @@ while running:
     screen.fill("purple")
 
     for obj in world_objects:
+        screen.blit(background, (0, 0))
         pygame.draw.rect(screen,"blue", [int(obj[0]),int(obj[1]),int(obj[2]),int(obj[3])])
 
 
