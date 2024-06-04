@@ -4,8 +4,8 @@ import csv
 
 # pygame setup
 pygame.init()
-screen_width = 800;
-screen_height = 800;
+screen_width = 900;
+screen_height = 720;
 screen = pygame.display.set_mode((screen_width, screen_height))
 clock = pygame.time.Clock()
 running = True
@@ -13,15 +13,13 @@ dt = 0
 player_pos = pygame.Vector2(screen.get_width() / 2, screen.get_height() / 2)
 
 world_objects = []
-def levelLoader(level):
-    with open('levels/level_' + level + '.csv', newline='') as csvfile:
-        file = csv.reader(csvfile, delimiter=',')
-        for row in file:
-            print(row[0], row[1], row[2])
-            _ = pygame.image.load('assets/images/Grass_' + row[0] + '.png')
-            _ = pygame.transform.scale(_, (int(row[1]), int(row[2])))
-            world_objects.append(_)
-levelLoader("alpha")
+
+with open('levels/level_001.csv', newline='') as csvfile:
+    spamreader = csv.reader(csvfile, delimiter=',')
+    for row in spamreader:
+        world_objects.append(row)
+        print(row)
+
 while running:
     # poll for events
     # pygame.QUIT event means the user clicked X to close your window
@@ -31,10 +29,10 @@ while running:
             print("Thanks for playing")
 
     # fill the screen with a color to wipe away anything from last frame
-    # screen.fill("purple")
+    screen.fill("purple")
 
     for obj in world_objects:
-        screen.blit(obj, (0, 0))
+        pygame.draw.rect(screen,"blue", [int(obj[0]),int(obj[1]),int(obj[2]),int(obj[3])])
 
 
     pygame.draw.rect(screen, "red", [player_pos[0],player_pos[1],10,10])
